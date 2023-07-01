@@ -1,0 +1,29 @@
+﻿<Page x:Class="Practice_3.Pages.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practice_3.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditPage">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+            <TextBlock Text="Наименование"/>
+            <TextBox Text="{Binding Name}" x:Name="TitleTb"></TextBox>
+            <TextBlock Text="Цена"></TextBlock>
+            <TextBox Text="{Binding Price}" x:Name="CostTb"></TextBox>
+            <TextBlock Text="Размер"></TextBlock>
+            <TextBox Text="{Binding Size}" x:Name="SizeTb"></TextBox>
+            <TextBlock Text="Количество"></TextBlock>
+            <TextBox Text="{Binding Quantity}" x:Name="QuanTb"></TextBox>
+            <TextBlock Text="Тип"></TextBlock>
+            <ComboBox  SelectedItem="{Binding Type }" x:Name="TypeCb"></ComboBox>
+            <TextBlock Text="Материал"></TextBlock>
+            <ComboBox  SelectedItem="{Binding Material}" x:Name="MaterialCb"></ComboBox>
+            <Button Margin="5" x:Name="Сохранить" Content=" Save" Click="Save_Click"></Button>
+            <Button Margin="5" x:Name="Назад" Content=" Back" Click="Back_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
